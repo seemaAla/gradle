@@ -25,6 +25,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      #uploads the built application
+      - name: Upload built application
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-build
+          path: build/libs/
+
   test:
     name: Run Tests
     runs-on: ubuntu-latest
