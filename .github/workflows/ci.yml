@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-build
-          path: build/libs/
+          path: build/distributions/*.zip
 
   test:
     name: Run Tests
